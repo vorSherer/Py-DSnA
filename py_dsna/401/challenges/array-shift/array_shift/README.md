@@ -9,5 +9,8 @@ Write a function called insert_shift_array which takes in an array and the value
 [My Code is here.](array_shift.py)
 
 ## Solution
-<!-- Embedded whiteboard image -->
+![array_shift Whiteboard part 1](/assets/array_shift_Whiteboard-1.png)
+
+
+
 
