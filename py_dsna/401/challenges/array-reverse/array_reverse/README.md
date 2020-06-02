@@ -14,7 +14,8 @@ Big O = O(n) <br>
 
 ![array_reverse Whiteboard part 2](./assets/array_reverse_Whiteboard-2.png)
 
-Checklist:
+
+## Checklist:
 
 Specifications
 - [X] All work done in a public repository called Py-DSnA (due to naming conflicts).
