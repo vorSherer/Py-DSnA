@@ -6,19 +6,20 @@ Write a function called reverse_array which takes an array as an argument. Witho
 
 ## Approach & Efficiency
 I used a slice approach with a -1 step to load a new array and returned the new array.
-Big O = O(n) 
+Big O = O(n) <br>
+[My code is here](array_reverse.py)
 
 ## Solution
 ![array_reverse Whitebaord part 1](./assets/array_reverse_Whiteboard-1.png)
 
 ![array_reverse Whiteboard part 2](./assets/array_reverse_Whiteboard-2.png)
 
-Checlist:
+Checklist:
 
 Specifications
-- [ ] All work done in a public repository called data-structures-and-algorithms.
+- [X] All work done in a public repository called Py-DSnA (due to naming conflicts).
 - [X] Create a new branch in your repo called array-reverse.
-- [ ] Top-level README contains a “Table of Contents” navigation to all of your challenges and implementations so far.
+- [X] Top-level README contains a “Table of Contents” navigation to all of your challenges and implementations so far.
 - [X] This assignment completed within the challenges subdirectory.
 - [X] On your branch, create a folder named array_reverse which contains a file called array_reverse.py
 Include any language-specific configuration files required for this challenge to become an individual component, module, library, etc.
