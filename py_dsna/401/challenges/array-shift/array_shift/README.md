@@ -1,16 +1,36 @@
 # Shift Contents of an Array
-<!-- Short summary or background information -->
+Given a list and a value to be added to the middle of said list, write code to do so, shifting the remainder of the list up one index from where the value was added.
 
 ## Challenge Description
 Write a function called insert_shift_array which takes in an array and the value to be added. Without utilizing any of the built-in methods available to your language, return an array with the new value added at the middle index.
 
 ## Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+I coded a floor division of the list length (+1 to account for odd index counts) and used a simple concatination to append the new value into the middle of the list. This approach works for integer and string content. <br>
+
+Big O space for this approach is O(1) <br>
+Big O time for this approach is O(n) <br>
+
 [My Code is here.](array_shift.py)
 
 ## Solution
 ![array_shift Whiteboard part 1](/assets/array_shift_Whiteboard-1.png)
 
 
+## Task Checklist: <br>
+- [X] Top-level README “Table of Contents” is updated <br>
+- [X] Feature tasks for this challenge are completed <br>
+- [X] Unit tests written and passing <br>
+    - [X] “Happy Path” - Expected outcome <br>
+    - [X] Expected failure <br>
+    - [X] Edge Case (if applicable/obvious) <br>
+- [X] README for this challenge is complete <br>
+    - [X] Summary, Description, Approach & Efficiency, Solution <br>
+    - [X] Link to code <br>
+    - [X] Picture of whiteboard <br>
 
 
+Pull Request submitted:  https://github.com/vorSherer/Py-DSnA/pull/10
+
+
+## Collaboration and Attribution
+Thanks to __*James Salamonsen*__ for help in resolving import issues!
