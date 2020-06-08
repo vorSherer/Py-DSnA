@@ -7,13 +7,14 @@ Write a function called insert_shift_array which takes in an array and the value
 ## Approach & Efficiency
 I coded a floor division of the list length (+1 to account for odd index counts) and used a simple concatination to append the new value into the middle of the list. This approach works for integer and string content. <br>
 
-Big O space for this approach is O(1) <br>
+Big O space for this approach is O(n) <br>
 Big O time for this approach is O(n) <br>
 
-[My Code is here.](array_shift.py)
-
 ## Solution
-![array_shift Whiteboard part 1](/assets/array_shift_Whiteboard-1.png)
+![array_shift Whiteboard part 1](/assets/array_shift_WB-1.png)
+![array_shift Whiteboard part 2](/assets/array_shift_WB-2.png)
+
+[My Code is here.](array_shift.py)
 
 
 ## Task Checklist: <br>
@@ -26,11 +27,12 @@ Big O time for this approach is O(n) <br>
 - [X] README for this challenge is complete <br>
     - [X] Summary, Description, Approach & Efficiency, Solution <br>
     - [X] Link to code <br>
-    - [X] Picture of whiteboard <br>
+    - [X] Pictures of whiteboard <br>
 
 
 Pull Request submitted:  https://github.com/vorSherer/Py-DSnA/pull/10
 
 
 ## Collaboration and Attribution
-Thanks to __*James Salamonsen*__ for help in resolving import issues!
+Thanks to __*James Salamonsen*__ for help in resolving import issues! <br>
+[Big O Cheatsheet](https://www.bigocheatsheet.com/) helped in determining *Big O* for this assignment. <br>
