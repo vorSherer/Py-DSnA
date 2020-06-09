@@ -30,8 +30,7 @@ Big O time for this approach is TBD <br>
     - [ ] Pictures of whiteboard <br>
 
 
-Pull Request submitted: 
-<!-- https://github.com/vorSherer/Py-DSnA/pull/ -->
+Pull Request submitted: https://github.com/vorSherer/Py-DSnA/pull/11
 
 
 ## Collaboration and Attribution
