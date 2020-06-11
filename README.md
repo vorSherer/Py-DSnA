@@ -4,5 +4,5 @@
 
 [Code Challenge 02 - array_shift](/py_dsna/challenges/array-shift/array_shift/README.md)
 
-[Code Challenge 03 - array_binary_search](/py_dsna/challenges/array-binary-search/array_binary_search/README.md)
+[Code Challenge 03 - array_binary_search](/py_dsna/401/challenges/array-binary-search/README.md)
 
