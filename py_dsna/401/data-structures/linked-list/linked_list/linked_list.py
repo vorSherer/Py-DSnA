@@ -31,6 +31,12 @@ class LinkedList:
         self.head = None
 
 # Define a method called insert which takes any value as an argument and adds a new node with that value to the head of the list with an O(1) Time performance.
+    def insert(self, value):
+        '''
+        This method inserts a new node as the (new) head of a linked list.
+        '''
+        self.head = Node(value, self.head)
+
 
 # Define a method called includes which takes any value as an argument and returns a boolean result depending on whether that value exists as a Node’s value somewhere within the list.
 

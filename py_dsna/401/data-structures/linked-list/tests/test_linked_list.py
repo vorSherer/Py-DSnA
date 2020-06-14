@@ -12,9 +12,18 @@ def test_LinkedList_exists():
 
 
 # Can successfully instantiate an empty linked list
+def test_instance():
+  ll = LinkedList()
+  assert ll.head == None
+
 
 # Can properly insert into the linked list
-
+def test_insert_to_ll():
+    ll = LinkedList()
+    ll.insert('apple')
+    expected = 'apple'
+    assert ll.head.value == expected
+    
 # The head property will properly point to the first node in the linked list
 
 # Can properly insert multiple nodes into the linked list
