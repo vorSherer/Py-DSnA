@@ -26,10 +26,10 @@ Write tests to prove the following functionality: <br>
 ## API
 <!-- Description of each method publicly available to your Linked List -->
 
-Submission PR: NN
+Submission PR: https://github.com/vorSherer/Py-DSnA/pull/2
 
 ## Task Checklist: <br>
-- [X] Top-level README “Table of Contents” is updated <br>
+- [ ] Top-level README “Table of Contents” is updated <br>
 - [X] Feature tasks for this challenge are completed <br>
 - [ ] Unit tests written and passing <br>
     - [ ] “Happy Path” - Expected outcome <br>
