@@ -32,7 +32,7 @@ The candidate should draw the input and output as a square of integers. <br>
 Record detailed notes on the rubric, to share with the candidate when the interview is complete. <br>
 
 
-![Whiteboard rubric on me here](/assets/CC-04_Whiteboard_Rubric_Sherer.png)
+![Whiteboard rubric on me here](./assets/CC-04_Whiteboard_Rubric_Sherer.png)
 
 #### My Submitted Comments:
 "I feel my interviewer was more lenient with me than necessary. While I appreciate his graciousness, I would have scored myself lower in several areas. My use of time was impacted by my unfamiliarity with matrices in coding. No way to go but up!" <br>
