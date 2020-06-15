@@ -27,6 +27,8 @@ Write tests to prove the following functionality: <br>
 <!-- Description of each method publicly available to your Linked List -->
 
 Submission PR: https://github.com/vorSherer/Py-DSnA/pull/2
+https://github.com/vorSherer/Py-DSnA/pull/12
+
 
 ## Task Checklist: <br>
 - [ ] Top-level README “Table of Contents” is updated <br>
