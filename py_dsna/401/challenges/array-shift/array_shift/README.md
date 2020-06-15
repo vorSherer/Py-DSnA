@@ -11,8 +11,8 @@ Big O space for this approach is O(n) <br>
 Big O time for this approach is O(n) <br>
 
 ## Solution
-![array_shift Whiteboard part 1](/assets/array_shift_WB-1.png)
-![array_shift Whiteboard part 2](/assets/array_shift_WB-2.png)
+![array_shift Whiteboard part 1](./assets/array_shift_WB-1.png)
+![array_shift Whiteboard part 2](./assets/array_shift_WB-2.png)
 
 [My Code is here.](array_shift.py)
 
