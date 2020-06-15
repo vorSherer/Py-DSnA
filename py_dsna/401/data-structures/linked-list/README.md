@@ -26,6 +26,17 @@ Write tests to prove the following functionality: <br>
 ## API
 <!-- Description of each method publicly available to your Linked List -->
 
-Submission PR: 
+Submission PR: NN
 
+## Task Checklist: <br>
+- [X] Top-level README “Table of Contents” is updated <br>
+- [X] Feature tasks for this challenge are completed <br>
+- [ ] Unit tests written and passing <br>
+    - [ ] “Happy Path” - Expected outcome <br>
+    - [ ] Expected failure <br>
+    - [ ] Edge Case (if applicable/obvious) <br>
+- [ ] README for this challenge is complete <br>
+    - [X] Summary, Description, Approach & Efficiency, Solution <br>
+    - [X] Link to code <br>
+    - [ ] Pictures of whiteboard <br>
 
