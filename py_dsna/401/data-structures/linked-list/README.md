@@ -55,4 +55,3 @@ CC-07 Submission PR: https://github.com/vorSherer/Py-DSnA/pull/21
     - [X] Summary, Description, Approach & Efficiency, Solution <br>
     - [X] Link to code <br>
     - [ ] Pictures of whiteboard <br>
-
