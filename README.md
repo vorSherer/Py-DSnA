@@ -9,4 +9,6 @@
 
 [Code Challenge 04 - team_whiteboarding](/py_dsna/401/challenges/cc-04_Whiteboard/README.md)
 
-[Code Challenge 05 - LinkedList](/py_dsna/401/data-structures/linked-list/README.md)
+[Code Challenges 05/06/07 - LinkedList](/py_dsna/401/data-structures/linked-list/README.md)
+
+

@@ -39,9 +39,9 @@ Write tests to prove the following functionality: <br>
 CC-05 Submission PR: https://github.com/vorSherer/Py-DSnA/pull/2
 https://github.com/vorSherer/Py-DSnA/pull/12
 
-CC-06 Submission PR: NN
+CC-06 Submission PR: https://github.com/vorSherer/Py-DSnA/pull/21
 
-CC-07 Submission PR: NN
+CC-07 Submission PR: https://github.com/vorSherer/Py-DSnA/pull/21
 
 
 ## Task Checklist: <br>
