@@ -27,13 +27,13 @@ Write tests to prove the following functionality: <br>
 <!-- Description of each method publicly available to your Linked List -->
 
 ## Code Challenge 5 whiteboard:
-[]()
+[CC-05 singly-linked list]()
 
 ## Code Challenge 6 whiteboard:
-![CC-06 linked list insertions](./assets/CC-06_ll-insertions_WB.png)
+![CC-06 linked list insertions](assets/ll-insertions.png)
 
 ## Code Challenge 7 whiteboard:
-![CC-07 linked list kth-from-the-end](./assets/CC-07_ll-kth-from-end_WB.png)
+![CC-07 linked list kth-from-the-end](assets/ll-kth-from-end.png)
 
 
 CC-05 Submission PR: https://github.com/vorSherer/Py-DSnA/pull/2
@@ -45,7 +45,7 @@ CC-07 Submission PR: NN
 
 
 ## Task Checklist: <br>
-- [ ] Top-level README “Table of Contents” is updated <br>
+- [X] Top-level README “Table of Contents” is updated <br>
 - [X] Feature tasks for this challenge are completed <br>
 - [ ] Unit tests written and passing <br>
     - [X] “Happy Path” - Expected outcome <br>
