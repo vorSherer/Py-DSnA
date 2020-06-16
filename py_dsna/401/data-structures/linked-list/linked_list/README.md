@@ -1,7 +1,7 @@
 # Singly Linked List
 This project demonstrates the instantiation and modification of a singly-linked list.
 
-## Challenge
+## Challenge 05
 * Create a Node class that has properties for the value stored in the Node, and a pointer to the next Node.
 * Within your LinkedList class, include a head property. Upon instantiation, an empty Linked List should be created.
 * Define a method called insert which takes any value as an argument and adds a new node with that value to the head of the list with an O(1) Time performance.
@@ -26,16 +26,30 @@ Write tests to prove the following functionality: <br>
 ## API
 <!-- Description of each method publicly available to your Linked List -->
 
-Submission PR: https://github.com/vorSherer/Py-DSnA/pull/2
+## Code Challenge 5 whiteboard:
+[CC-05 singly-linked list]()
+
+## Code Challenge 6 whiteboard:
+![CC-06 linked list insertions](assets/ll-insertions.png)
+
+## Code Challenge 7 whiteboard:
+![CC-07 linked list kth-from-the-end](assets/ll-kth-from-end.png)
+
+
+CC-05 Submission PR: https://github.com/vorSherer/Py-DSnA/pull/2
 https://github.com/vorSherer/Py-DSnA/pull/12
+
+CC-06 Submission PR: https://github.com/vorSherer/Py-DSnA/pull/21
+
+CC-07 Submission PR: https://github.com/vorSherer/Py-DSnA/pull/21
 
 
 ## Task Checklist: <br>
-- [ ] Top-level README “Table of Contents” is updated <br>
+- [X] Top-level README “Table of Contents” is updated <br>
 - [X] Feature tasks for this challenge are completed <br>
 - [ ] Unit tests written and passing <br>
-    - [ ] “Happy Path” - Expected outcome <br>
-    - [ ] Expected failure <br>
+    - [X] “Happy Path” - Expected outcome <br>
+    - [X] Expected failure <br>
     - [ ] Edge Case (if applicable/obvious) <br>
 - [ ] README for this challenge is complete <br>
     - [X] Summary, Description, Approach & Efficiency, Solution <br>
