@@ -42,3 +42,6 @@ https://github.com/vorSherer/Py-DSnA/pull/12
     - [X] Link to code <br>
     - [ ] Pictures of whiteboard <br>
 
+
+## Collaboration and Attribution
+Thanks to __*Skyler Burger*__ for help with correcting my TypeError trap implementation!

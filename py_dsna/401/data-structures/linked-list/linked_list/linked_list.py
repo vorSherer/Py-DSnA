@@ -9,6 +9,7 @@ class Node:
         '''
         This function initializes the Node class. It takes in a value and an optional value for next_node, pointing to the next node in the list. An error check will prevent non-type-correct data from being instantiated as a node. If no value is supplied for next_node, it will be initialized to "None," indicating that this will be the head node.
         '''
+        self.type_error_check(next_node)
         self.value = value
         self.next_node = next_node
 
@@ -24,9 +25,18 @@ class Node:
         '''
         return self.next_node
 
+    def type_error_check(self, next_node):
+        '''
+        This error check prevents non-type-correct data from being instantiated as a node.
+        '''
+        if not isinstance(next_node, Node) and next_node != None:
+            raise TypeError("The value passed for next_node is not a valid instance of the Node class.")
+
+    def __str__(self):
+        return f"{self.value} : {self.next_node}"
 
     def __repr__(self):
-        return f"{self.value} : {self.next_node}"
+        return f"<Node> value={self.value}, next node={self.next_node}"
 
 
 # Within your LinkedList class, include a head property. Upon instantiation, an empty Linked List should be created.
@@ -54,8 +64,9 @@ class LinkedList:
         This method inserts a new node as the (new) head of a linked list.
         '''
         try:
-            if type_error_check(next_node):
-                self.head = Node(value, self.head)
+            # if not type_error_check(next_node):
+            self.head = Node(value, self.head)
+            return self.head
         except:
             return "Error when attempting to use insert method."
 
@@ -98,5 +109,6 @@ class LinkedList:
 
 
 if __name__ == "__main__":
-    apples = Node('apples')
-    print(apples)
+    ll = LinkedList()
+    apples = ll.insert('apples')
+    print(apples.value)
