@@ -52,20 +52,20 @@ def starter_fruit():
     ll = LinkedList()
     ll.insert("apples")
     ll.insert("bananas")
+    ll.insert("cantaloupes")
+    ll.insert("d'Anjou pears")
     return ll
 
 
-# @pytest.mark.skip
 def test_insert_full(starter_fruit):
     ll = starter_fruit
-    assert ll.head.value == "bananas"
-    assert ll.head.next_node.value == "apples"
+    assert ll.head.value == "d'Anjou pears"
+    assert ll.head.next_node.value == "cantaloupes"
 
 
-# @pytest.mark.skip
 def test_str_output(starter_fruit):
     ll = starter_fruit
-    assert str(ll) == "{ bananas } -> { apples } -> None"
+    assert str(ll) == "{ d'Anjou pears } -> { cantaloupes } -> { bananas } -> { apples } -> None"
 
 
 # Will return true when finding a value within the linked list that exists
@@ -81,16 +81,107 @@ def test_find_value_in_list_fails(starter_fruit):
 
 
 # Can properly return a collection of all the values that exist in the linked list
-def test_return_whole_list_values():
-    ll = LinkedList()
-    ll.insert("apples")
-    ll.insert("bananas")
-    ll.insert("cantaloupes")
-    ll.insert("d'Anjou pears")
-    assert str(ll) == "{ d'Anjou pears } -> { cantaloupes } -> { bananas } -> { apples } -> None" 
+def test_return_whole_list_values(starter_fruit):
+    ll = starter_fruit
+    assert str(ll) == "{ d'Anjou pears } -> { cantaloupes } -> { bananas } -> { apples } -> None"
+
 
 # Testing TypeError trap
 # @pytest.mark.skip
 def test_insert_typeerror():
   with pytest.raises(TypeError):
     Node("Bogus_data", "This is NOT a Node")
+
+
+# CC-06; Can successfully add a node to the end of the linked list
+# @pytest.mark.skip
+def test_append_node_to_end(starter_fruit):
+    ll = starter_fruit
+    ll.append("lemons")
+    assert str(ll) == "{ d'Anjou pears } -> { cantaloupes } -> { bananas } -> { apples } -> { lemons } -> None"
+
+
+# @pytest.mark.skip
+def test_append_node_to_empty_list():
+    ll = LinkedList()
+    ll.append("lemons")
+    assert str(ll) == "{ lemons } -> None"
+
+
+# CC-06; Can successfully add multiple nodes to the end of a linked list
+# @pytest.mark.skip
+def test_append_multiple_nodes_to_end(starter_fruit):
+    ll = starter_fruit
+    ll.append("lemons")
+    ll.append("limes")
+    assert str(ll) == "{ d'Anjou pears } -> { cantaloupes } -> { bananas } -> { apples } -> { lemons } -> { limes } -> None"
+
+
+# CC-06; Can successfully insert a node before a node located in the middle of a linked list
+# @pytest.mark.skip
+def test_insert_node_amid_list(starter_fruit):
+    ll = starter_fruit
+    ll.insert_before("bananas", "limes")
+    expected = "{ d'Anjou pears } -> { cantaloupes } -> { limes } -> { bananas } -> { apples } -> None"
+    actual = str(ll)
+    assert actual == expected
+
+
+# @pytest.mark.skip
+def test_insert_node_to_empty_list():
+    ll = LinkedList()
+    ll.insert_before("apples", "lemons")
+    assert -1
+
+
+# CC-06; Can successfully insert a node before the first node of a linked list
+# @pytest.mark.skip
+def test_insert_node_before_head():
+    ll = LinkedList()
+    ll.append("apples")
+    ll.insert_before("apples", "lemons")
+    assert str(ll) == "{ lemons } -> { apples } -> None"
+
+
+# @pytest.mark.skip
+def test_insert_node_no_value_match():
+    ll = LinkedList()
+    ll.append("apples")
+    ll.insert_before("Blueberries", "lemons")
+    assert -1
+
+
+# CC-06; Can successfully insert after a node in the middle of the linked list
+# @pytest.mark.skip
+def test_insert_after_amid_list(starter_fruit):
+    ll = starter_fruit
+    ll.insert_after("bananas", "limes")
+    expected = "{ d'Anjou pears } -> { cantaloupes } -> { bananas } -> { limes } -> { apples } -> None"
+    actual = str(ll)
+    assert actual == expected
+
+
+# @pytest.mark.skip
+def test_insert_after_no_match(starter_fruit):
+    ll = starter_fruit
+    ll.insert_after("kiwis", "limes")
+    expected = "{ d'Anjou pears } -> { cantaloupes } -> { bananas } -> { limes } -> { apples } -> None"
+    actual = str(ll)
+    assert -1
+
+
+# @pytest.mark.skip
+def test_insert_after_empty_list():
+    ll = LinkedList()
+    ll.insert_after("apples", "lemons")
+    assert -1
+
+
+# CC-06; Can successfully insert a node after the last node of the linked list
+# @pytest.mark.skip
+def test_insert_after_end(starter_fruit):
+    ll = starter_fruit
+    ll.insert_after("apples", "limes")
+    expected = "{ d'Anjou pears } -> { cantaloupes } -> { bananas } -> { apples } -> { limes } -> None"
+    actual = str(ll)
+    assert actual == expected
