@@ -20,8 +20,19 @@ Write tests to prove the following functionality: <br>
 1. Will return false when searching for a value in the linked list that does not exist
 1. Can properly return a collection of all the values that exist in the linked list
 
+## Challenge 06
+Write the following methods for the Linked List class: <br>
+* __*.append(value)*__ which adds a new node with the given value to the end of the list. <br>
+* __*.insertBefore(value, newVal)*__ which add a new node with the given newValue immediately before the first value node. <br>
+* __*.insertAfter(value, newVal)*__ which add a new node with the given newValue immediately after the first value node.
+
+## Challenge 07
+
+
 ## Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+Big O space for this approach is O(n) <br>
+Big O time for this approach is O(n) <br>
+Big O time for insertion/deletion is O(1) <br>
 
 ## API
 <!-- Description of each method publicly available to your Linked List -->
@@ -36,12 +47,11 @@ Write tests to prove the following functionality: <br>
 ![CC-07 linked list kth-from-the-end](assets/ll-kth-from-end.png)
 
 
-CC-05 Submission PR: https://github.com/vorSherer/Py-DSnA/pull/2
-https://github.com/vorSherer/Py-DSnA/pull/12
+CC-05 Submission PR: https://github.com/vorSherer/Py-DSnA/pull/12
 
-CC-06 Submission PR: https://github.com/vorSherer/Py-DSnA/pull/21
+CC-06 Submission PR: https://github.com/vorSherer/Py-DSnA/pull/23
 
-CC-07 Submission PR: https://github.com/vorSherer/Py-DSnA/pull/21
+CC-07 Submission PR: https://github.com/vorSherer/Py-DSnA/pull/23
 
 
 ## Task Checklist: <br>
