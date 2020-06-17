@@ -189,7 +189,7 @@ if __name__ == "__main__":
     ll.insert("bananas")
     ll.insert("cantaloupes")
     ll.insert("d'Anjou pears")
-    ll.insert_after("bananas", "limes")
+    # ll.insert_after("bananas", "limes")
     print(str(ll))
     # print("Head val ", ll.head.value)
     # print("Next val ", ll.head.next_node.value)
