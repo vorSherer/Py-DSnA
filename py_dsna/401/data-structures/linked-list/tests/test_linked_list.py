@@ -178,10 +178,55 @@ def test_insert_after_empty_list():
 
 
 # CC-06; Can successfully insert a node after the last node of the linked list
-# @pytest.mark.skip
+@pytest.mark.skip
 def test_insert_after_end(starter_fruit):
     ll = starter_fruit
     ll.insert_after("apples", "limes")
     expected = "{ d'Anjou pears } -> { cantaloupes } -> { bananas } -> { apples } -> { limes } -> None"
     actual = str(ll)
     assert actual == expected
+
+# CC-07; Where k is greater than the length of the linked list
+@pytest.mark.skip
+def test_k_greater_than_length(starter_fruit):
+    ll = starter_fruit
+    actual = ll.value_at_kth_from_end(5)
+    expected = Exception("Value for k must be less that list length.")
+    assert actual == expected
+
+
+# CC-07; Where k and the length of the list are the same
+@pytest.mark.skip
+def test_k_same_as_length(starter_fruit):
+    ll = starter_fruit
+    actual = ll.value_at_kth_from_end(4)
+    expected = Exception("Value for k must be less that list length.")
+    assert actual == expected
+
+# CC-07; Where k is not a positive integer
+@pytest.mark.skip
+def test_k_is_negative_value(starter_fruit):
+    ll = starter_fruit
+    actual = ll.value_at_kth_from_end(-2)
+    expected = Exception("Value supplied for k must be a positive integer.")
+    assert actual == expected
+
+    
+# CC-07; Where the linked list is of a size 1
+# @pytest.mark.skip
+def test_ll_size_1():
+    ll = LinkedList()
+    ll.insert("apples")
+    actual = ll.value_at_kth_from_end(0)
+    expected = "apples"
+    assert actual == expected
+
+
+# CC-07; “Happy Path” where k is not at the end, but somewhere in the middle of the linked list
+# @pytest.mark.skip
+def test_k_amid_list(starter_fruit):
+    ll = starter_fruit
+    expected = "cantaloupes"
+    actual = ll.value_at_kth_from_end(2)
+    assert actual == expected
+

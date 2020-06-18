@@ -45,12 +45,10 @@ class LinkedList:
     '''
     This is the Linked List class object. It is used to instantiate and manage a singly-linked list.
     '''
-    def __init__(self, value=None, new_val=None):
+    def __init__(self):
         '''
         This function initializes the Linked List class.  It takes in a value as an argument that will be passed to the Node class for instantiation, or if no value is provided, the default will be "None".
         '''
-        self.value = value
-        self.new_val = new_val
         self.head = None
 
 # Any exceptions or errors that come from your code should be semantic, capturable errors. For example, rather than a default error thrown by your language, your code should raise/throw a custom, semantic error that describes what went wrong in calling the methods you wrote for this lab.
@@ -157,6 +155,41 @@ class LinkedList:
         except:
             return "Error occurred while attempting insert_after method."
 
+# Write a method for the Linked List class which takes a number, k, as a parameter. Return the node’s value that is k from the end of the linked list. You have access to the Node class and all the properties on the Linked List class as well as the methods created in previous challenges.
+
+    def list_length_finder(self):
+        '''
+        This helper method counts the nodes as it traverses the linked list and returns the count.
+        '''
+        node_count = 0
+        current = self.head
+
+        while current:
+            node_count += 1
+            current = current.next_node
+        return node_count
+
+
+    def value_at_kth_from_end(self, k_val):
+        '''
+        This method takes in a number, k, as a parameter and returns the node’s value that is k from the end of the linked list.
+        '''
+        # try:
+        if k_val >= 0:
+            current = self.head
+            length = self.list_length_finder()
+            target = length - k_val
+            
+            if target < 1:
+                raise Exception("Value for k must be less that list length.")
+            for _ in range(1, target):
+                current = current.next_node
+            return current.value
+        else:
+            raise Exception("Value supplied for k must be a positive integer.")
+        # except:
+        #     return "Error occurred while attempting value_at_kth_from_end method."
+
 
 # Define a method called __str__ which takes in no arguments and returns a string representing all the values in the Linked List, formatted as:
 # "{ a } -> { b } -> { c } -> NULL"
@@ -193,4 +226,5 @@ if __name__ == "__main__":
     print(str(ll))
     # print("Head val ", ll.head.value)
     # print("Next val ", ll.head.next_node.value)
-    
+    print(ll.value_at_kth_from_end(3))
+
