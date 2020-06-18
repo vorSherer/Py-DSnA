@@ -211,7 +211,7 @@ def test_k_is_negative_value(starter_fruit):
     expected = Exception("Value supplied for k must be a positive integer.")
     assert actual == expected
 
-    
+
 # CC-07; Where the linked list is of a size 1
 # @pytest.mark.skip
 def test_ll_size_1():
