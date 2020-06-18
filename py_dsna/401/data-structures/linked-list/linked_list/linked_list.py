@@ -174,21 +174,20 @@ class LinkedList:
         '''
         This method takes in a number, k, as a parameter and returns the node’s value that is k from the end of the linked list.
         '''
-        # try:
+        if type(k_val) is not int:
+            raise TypeError("Value for k must be a positive integer.")
         if k_val >= 0:
             current = self.head
             length = self.list_length_finder()
             target = length - k_val
             
             if target < 1:
-                raise Exception("Value for k must be less that list length.")
+                raise ValueError("Value for k must be less that list length.")
             for _ in range(1, target):
                 current = current.next_node
             return current.value
         else:
-            raise Exception("Value supplied for k must be a positive integer.")
-        # except:
-        #     return "Error occurred while attempting value_at_kth_from_end method."
+            raise ValueError("Value supplied for k must be a positive integer.")
 
 
 # Define a method called __str__ which takes in no arguments and returns a string representing all the values in the Linked List, formatted as:
@@ -226,5 +225,7 @@ if __name__ == "__main__":
     print(str(ll))
     # print("Head val ", ll.head.value)
     # print("Next val ", ll.head.next_node.value)
-    print(ll.value_at_kth_from_end(3))
+    # print(ll.value_at_kth_from_end(5))
+    # print(ll.value_at_kth_from_end(-2))
+    print(ll.value_at_kth_from_end("one"))
 

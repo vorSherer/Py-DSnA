@@ -89,8 +89,8 @@ def test_return_whole_list_values(starter_fruit):
 # Testing TypeError trap
 # @pytest.mark.skip
 def test_insert_typeerror():
-  with pytest.raises(TypeError):
-    Node("Bogus_data", "This is NOT a Node")
+    with pytest.raises(TypeError):
+        Node("Bogus_data", "This is NOT a Node")
 
 
 # CC-06; Can successfully add a node to the end of the linked list
@@ -178,7 +178,7 @@ def test_insert_after_empty_list():
 
 
 # CC-06; Can successfully insert a node after the last node of the linked list
-@pytest.mark.skip
+# @pytest.mark.skip
 def test_insert_after_end(starter_fruit):
     ll = starter_fruit
     ll.insert_after("apples", "limes")
@@ -187,29 +187,27 @@ def test_insert_after_end(starter_fruit):
     assert actual == expected
 
 # CC-07; Where k is greater than the length of the linked list
-@pytest.mark.skip
+# @pytest.mark.skip
 def test_k_greater_than_length(starter_fruit):
     ll = starter_fruit
-    actual = ll.value_at_kth_from_end(5)
-    expected = Exception("Value for k must be less that list length.")
-    assert actual == expected
+    with pytest.raises(Exception):
+        ll.value_at_kth_from_end(5)
 
 
 # CC-07; Where k and the length of the list are the same
-@pytest.mark.skip
+# @pytest.mark.skip
 def test_k_same_as_length(starter_fruit):
     ll = starter_fruit
-    actual = ll.value_at_kth_from_end(4)
-    expected = Exception("Value for k must be less that list length.")
-    assert actual == expected
+    with pytest.raises(ValueError):
+        ll.value_at_kth_from_end(4)
+
 
 # CC-07; Where k is not a positive integer
-@pytest.mark.skip
+# @pytest.mark.skip
 def test_k_is_negative_value(starter_fruit):
     ll = starter_fruit
-    actual = ll.value_at_kth_from_end(-2)
-    expected = Exception("Value supplied for k must be a positive integer.")
-    assert actual == expected
+    with pytest.raises(ValueError):
+        ll.value_at_kth_from_end(-2)
 
 
 # CC-07; Where the linked list is of a size 1
@@ -230,3 +228,17 @@ def test_k_amid_list(starter_fruit):
     actual = ll.value_at_kth_from_end(2)
     assert actual == expected
 
+
+# Edge Case: User enters string value for k
+def test_nonint_value_for_k(starter_fruit):
+    ll = starter_fruit
+    with pytest.raises(TypeError):
+        ll.value_at_kth_from_end("one")
+
+
+# Edge Case: User enters floating point value for k
+def test_float_value_for_k():
+    ll = LinkedList()
+    ll.insert("apples")
+    with pytest.raises(TypeError):
+        ll.value_at_kth_from_end(2.3)
