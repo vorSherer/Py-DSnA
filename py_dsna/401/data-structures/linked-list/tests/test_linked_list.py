@@ -63,9 +63,11 @@ def test_insert_full(starter_fruit):
     assert ll.head.next_node.value == "cantaloupes"
 
 
-def test_str_output(starter_fruit):
-    ll = starter_fruit
-    assert str(ll) == "{ d'Anjou pears } -> { cantaloupes } -> { bananas } -> { apples } -> None"
+# Testing TypeError trap
+# @pytest.mark.skip
+def test_insert_typeerror():
+    with pytest.raises(TypeError):
+        Node("Bogus_data", "This is NOT a Node")
 
 
 # Will return true when finding a value within the linked list that exists
@@ -81,16 +83,9 @@ def test_find_value_in_list_fails(starter_fruit):
 
 
 # Can properly return a collection of all the values that exist in the linked list
-def test_return_whole_list_values(starter_fruit):
+def test_str_output(starter_fruit):
     ll = starter_fruit
     assert str(ll) == "{ d'Anjou pears } -> { cantaloupes } -> { bananas } -> { apples } -> None"
-
-
-# Testing TypeError trap
-# @pytest.mark.skip
-def test_insert_typeerror():
-  with pytest.raises(TypeError):
-    Node("Bogus_data", "This is NOT a Node")
 
 
 # CC-06; Can successfully add a node to the end of the linked list
@@ -185,3 +180,61 @@ def test_insert_after_end(starter_fruit):
     expected = "{ d'Anjou pears } -> { cantaloupes } -> { bananas } -> { apples } -> { limes } -> None"
     actual = str(ll)
     assert actual == expected
+
+
+# CC-07; Where k is greater than the length of the linked list
+# @pytest.mark.skip
+def test_k_greater_than_length(starter_fruit):
+    ll = starter_fruit
+    with pytest.raises(Exception):
+        ll.value_at_kth_from_end(5)
+
+
+# CC-07; Where k and the length of the list are the same
+# @pytest.mark.skip
+def test_k_same_as_length(starter_fruit):
+    ll = starter_fruit
+    with pytest.raises(ValueError):
+        ll.value_at_kth_from_end(4)
+
+
+# CC-07; Where k is not a positive integer
+# @pytest.mark.skip
+def test_k_is_negative_value(starter_fruit):
+    ll = starter_fruit
+    with pytest.raises(ValueError):
+        ll.value_at_kth_from_end(-2)
+
+
+# CC-07; Where the linked list is of a size 1
+# @pytest.mark.skip
+def test_ll_size_1():
+    ll = LinkedList()
+    ll.insert("apples")
+    actual = ll.value_at_kth_from_end(0)
+    expected = "apples"
+    assert actual == expected
+
+
+# CC-07; “Happy Path” where k is not at the end, but somewhere in the middle of the linked list
+# @pytest.mark.skip
+def test_k_amid_list(starter_fruit):
+    ll = starter_fruit
+    expected = "cantaloupes"
+    actual = ll.value_at_kth_from_end(2)
+    assert actual == expected
+
+
+# Edge Case: User enters string value for k
+def test_nonint_value_for_k(starter_fruit):
+    ll = starter_fruit
+    with pytest.raises(TypeError):
+        ll.value_at_kth_from_end("one")
+
+
+# Edge Case: User enters floating point value for k
+def test_float_value_for_k():
+    ll = LinkedList()
+    ll.insert("apples")
+    with pytest.raises(TypeError):
+        ll.value_at_kth_from_end(2.3)

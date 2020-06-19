@@ -10,6 +10,9 @@ pytest-watch = "^4.2.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
+pylint = "^2.5.3"
+black = "^19.10b0"
+pytest-watch = "^4.2.0"
 
 [build-system]
 requires = ["poetry>=0.12"]
