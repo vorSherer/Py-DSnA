@@ -5,14 +5,13 @@ class Node:
     '''
     This is the Node class. It is used to instantiate a new node for the linked list.
     '''
-    def __init__(self, value, next_node=None):  #, new_value=None):
+    def __init__(self, value, next_node=None):
         '''
         This function initializes the Node class. It takes in a value and an optional value for next_node, pointing to the next node in the list. An error check will prevent non-type-correct data from being instantiated as a node. If no value is supplied for next_node, it will be initialized to "None," indicating that this will be the head node.
         '''
         self.type_error_check(next_node)
         self.value = value
         self.next_node = next_node
-        # self.new_value = new_value
 
     def has_value(self):
         '''
@@ -40,14 +39,14 @@ class Node:
         return f"<Node> value={self.value}, next node={self.next_node}"
 
 
-# Within your LinkedList class, include a head property. Upon instantiation, an empty Linked List should be created.
+# Within your Create a LinkedList class, include a head property. Upon instantiation, an empty Linked List should be created.
 class LinkedList:
     '''
-    This is the Linked List class object. It is used to instantiate and manage a singly-linked list.
+    This is the LinkedList class object. It is used to instantiate and manage a singly-linked list.
     '''
     def __init__(self):
         '''
-        This function initializes the Linked List class.  It takes in a value as an argument that will be passed to the Node class for instantiation, or if no value is provided, the default will be "None".
+        This function initializes the LinkedList class.  It initializes an empty list with head value = "None".
         '''
         self.head = None
 
@@ -58,25 +57,23 @@ class LinkedList:
         '''
         if not isinstance(next_node, Node) and next_node != None:
             raise TypeError("The value passed for next_node is not a valid instance of the Node class.")
+
 # Define a method called insert which takes any value as an argument and adds a new node with that value to the head of the list with an O(1) Time performance.
     def insert(self, value):
         '''
         This method inserts a new node as the (new) head of a linked list.
         '''
         try:
-            # if not type_error_check(next_node):
             self.head = Node(value, self.head)
             return self.head
         except:
             return "Error when attempting to use insert method."
-
 
 # Define a method called includes which takes any value as an argument and returns a boolean result depending on whether that value exists as a Node’s value somewhere within the list.
     def includes(self, value):
         '''
         This method traverses a linked list to find whether the given value exists in the list.
         '''
-
         current = self.head
 
         try:
@@ -87,7 +84,6 @@ class LinkedList:
             return False
         except:
             return "Error occurred when attempting includes method."
-
 
 # .append(value) which adds a new node with the given value to the end of the list
     def append(self, value):
@@ -134,8 +130,6 @@ class LinkedList:
         except:
             return "Error occurred while attempting to insert_before method."
 
-
-
 # .insert_after(value, newVal) which add a new node with the given new value immediately after the first value node
     def insert_after(self, value, new_val):
 
@@ -169,13 +163,12 @@ class LinkedList:
             current = current.next_node
         return node_count
 
-
     def value_at_kth_from_end(self, k_val):
         '''
         This method takes in a number, k, as a parameter and returns the node’s value that is k from the end of the linked list.
         '''
         if type(k_val) is not int:
-            raise TypeError("Value for k must be a positive integer.")
+            raise TypeError("Value supplied for k must be a positive integer.")
         if k_val >= 0:
             current = self.head
             length = self.list_length_finder()
@@ -188,7 +181,6 @@ class LinkedList:
             return current.value
         else:
             raise ValueError("Value supplied for k must be a positive integer.")
-
 
 # Define a method called __str__ which takes in no arguments and returns a string representing all the values in the Linked List, formatted as:
 # "{ a } -> { b } -> { c } -> NULL"
@@ -211,6 +203,9 @@ class LinkedList:
 
     def __repr__(self):
         return f"LinkedList : {self.head}"
+
+
+
 
 
 if __name__ == "__main__":

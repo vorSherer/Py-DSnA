@@ -37,21 +37,23 @@ Big O time for insertion/deletion is O(1) <br>
 ## API
 <!-- Description of each method publicly available to your Linked List -->
 
-## Code Challenge 5 whiteboard:
-[CC-05 singly-linked list]()
+## Code Challenge 5 whiteboards:
+![CC-05 singly-linked list -1](./assets/linked_list_WB-1.png)
+![CC-05 singly-linked list -2](./assets/linked_list_WB-2.png)
+![CC-05 singly-linked list -3](./assets/linked_list_WB-3.png)
 
 ## Code Challenge 6 whiteboard:
-![CC-06 linked list insertions](assets/ll-insertions.png)
+![CC-06 linked list insertions](assets/ll-insertions_WB.png)
 
 ## Code Challenge 7 whiteboard:
-![CC-07 linked list kth-from-the-end](assets/ll-kth-from-end.png)
+![CC-07 linked list kth-from-the-end](./assets/ll-kth-from-end_WB.png)
 
 
 CC-05 Submission PR: https://github.com/vorSherer/Py-DSnA/pull/12
 
 CC-06 Submission PR: https://github.com/vorSherer/Py-DSnA/pull/24
 
-CC-07 Submission PR: NN
+CC-07 Submission PR: https://github.com/vorSherer/Py-DSnA/pull/26
 
 
 ## Task Checklist: <br>
@@ -61,7 +63,7 @@ CC-07 Submission PR: NN
     - [X] “Happy Path” - Expected outcome <br>
     - [X] Expected failure <br>
     - [X] Edge Case (if applicable/obvious) <br>
-- [ ] README for this challenge is complete <br>
+- [X] README for this challenge is complete <br>
     - [X] Summary, Description, Approach & Efficiency, Solution <br>
     - [X] Link to code <br>
-    - [ ] Pictures of whiteboard <br>
+    - [X] Pictures of whiteboards <br>

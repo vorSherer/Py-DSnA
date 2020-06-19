@@ -63,9 +63,11 @@ def test_insert_full(starter_fruit):
     assert ll.head.next_node.value == "cantaloupes"
 
 
-def test_str_output(starter_fruit):
-    ll = starter_fruit
-    assert str(ll) == "{ d'Anjou pears } -> { cantaloupes } -> { bananas } -> { apples } -> None"
+# Testing TypeError trap
+# @pytest.mark.skip
+def test_insert_typeerror():
+    with pytest.raises(TypeError):
+        Node("Bogus_data", "This is NOT a Node")
 
 
 # Will return true when finding a value within the linked list that exists
@@ -81,16 +83,9 @@ def test_find_value_in_list_fails(starter_fruit):
 
 
 # Can properly return a collection of all the values that exist in the linked list
-def test_return_whole_list_values(starter_fruit):
+def test_str_output(starter_fruit):
     ll = starter_fruit
     assert str(ll) == "{ d'Anjou pears } -> { cantaloupes } -> { bananas } -> { apples } -> None"
-
-
-# Testing TypeError trap
-# @pytest.mark.skip
-def test_insert_typeerror():
-    with pytest.raises(TypeError):
-        Node("Bogus_data", "This is NOT a Node")
 
 
 # CC-06; Can successfully add a node to the end of the linked list
@@ -185,6 +180,7 @@ def test_insert_after_end(starter_fruit):
     expected = "{ d'Anjou pears } -> { cantaloupes } -> { bananas } -> { apples } -> { limes } -> None"
     actual = str(ll)
     assert actual == expected
+
 
 # CC-07; Where k is greater than the length of the linked list
 # @pytest.mark.skip
