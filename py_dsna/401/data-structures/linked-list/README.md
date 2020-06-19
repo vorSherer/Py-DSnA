@@ -27,7 +27,8 @@ Write the following methods for the Linked List class: <br>
 * __*.insertAfter(value, newVal)*__ which add a new node with the given newValue immediately after the first value node.
 
 ## Challenge 07
-
+Write a method for the Linked List class which takes a number, __*k*__, as a parameter. Return the node’s __value__ that is __k__ from the end of the linked list. <br>
+You have access to the Node class and all the properties on the Linked List class as well as the methods created in previous challenges.
 
 ## Approach & Efficiency
 Big O space for this approach is O(n) <br>
