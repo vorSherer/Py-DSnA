@@ -1,5 +1,5 @@
 # Merge two singly linked lists
-<!-- Short summary or background information -->
+Given two singly linked lists, merge them in place "zipper fashion" into one list.
 
 ## Challenge Description
 1. Write a function called merge_lists which takes two linked lists as arguments. Zip the two linked lists together into one so that the nodes alternate between the two lists and return a reference to the head of the zipped list. 
@@ -14,21 +14,23 @@ My code is [here](ll_merge/ll_merge.py)
 
 ## Solution
 ![ll_merge whiteboard image 1](assets/ll_merge_WB-1.png)
-![ll_merge whiteboard image 2](assets/ll_merge_wb-2.png)
+![ll_merge whiteboard image 2](assets/ll_merge_WB-2.png)
 
 
+## ATTRIBUTIONS:
+Many thanks to Skyler Burger and James Salamonsen for helping me dig out of the 'import' maze!
 
-Submission PR:  NN
+Submission PR:  https://github.com/vorSherer/Py-DSnA/pull/27
 
 Checklist:
 
  - [X] Top-level README “Table of Contents” is updated
- - [ ] Feature tasks for this challenge are completed
+ - [X] Feature tasks for this challenge are completed
  - [ ] Unit tests written and passing
      - [ ] “Happy Path” - Expected outcome
      - [ ] Expected failure
      - [ ] Edge Case (if applicable/obvious)
- - [ ] README for this challenge is complete
-     - [ ] Summary, Description, Approach & Efficiency, Solution
+ - [X] README for this challenge is complete
+     - [X] Summary, Description, Approach & Efficiency, Solution
      - [X] Link to code
      - [X] Picture of whiteboard
