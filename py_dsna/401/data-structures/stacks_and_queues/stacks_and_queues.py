@@ -17,12 +17,11 @@ class Node:
 
 class Stack:
     """
-    Instantiate an empty stack with top defaulted to None.
+    Instantiate an empty stack with top defaulted to None, then build the stack using Nodes.
     """
     def __init__(self):
         self.top = None
         
-
     def is_empty(self):
         if self.top == None:
             return True
@@ -35,22 +34,61 @@ class Stack:
         self.top = new_node
         return self.top
 
+    def peek(self):
+        if self.is_empty() is False:
+            return self.top.value
+
     def pop(self):
-        if is_empty() is False:
+        if self.is_empty() is False:
             stack_pop = self.top
-            self.top = top.next_
+            self.top = self.top.next
             stack_pop.next = None
             return stack_pop.value
 
-    def peek(self):
-        if is_empty()is False:
-            return self.top.value
-
     def __str__(self):
-        return f"Stack class; top = {self.top} with current value = {self.top.value}."
+        stack_top_val = self.top.value if self.top else None
+        return f"Stack class; top = {stack_top_val}."
 
     def __repr__(self):
         return f"<Stack> class; top={self.top}, current value={self.top.value}."
+
+
+class Queue:
+    """
+    Instantiate an empty queue, with the front and rear defaulted to None, then modify the queue with Nodes.
+    """
+    def __init__(self):
+        pass
+        # self.rear = None
+        # self.front = self.rear
+
+    def is_empty(self):
+        pass
+        # if self.front == None:
+        #     return True
+        # else:
+        #     return False
+
+    def enqueue(self, value, next_=None):
+        pass
+        # new_node = Node(value)
+        # self.rear.next = new_node
+        # self.rear = new_node
+
+    def peek(self):
+        pass
+        # if is_empty is not True:
+        #     return self.front.value
+        
+    def dequeue(self):
+        pass
+        # if is_empty is not True:
+        #     from_queue = self.front
+        #     self.front = self.front.next
+        #     from_queue.next = None
+        #     return from_queue.value
+            
+
 
 
 
