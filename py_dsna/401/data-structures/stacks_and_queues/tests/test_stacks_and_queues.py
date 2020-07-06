@@ -88,6 +88,17 @@ def test_one_item_popped_stack_isempty_pass():
     assert actual == expected
 
 
+def test_peek_at_empty_stack():
+    stack = Stack()
+    with pytest.raises(AttributeError):
+        stack.peek()
+
+
+def test_dequeue_from_empty_stack():
+    stack = Stack()
+    with pytest.raises(AttributeError):
+        stack.dequeue()
+
 
 @pytest.fixture
 def stock_stack():
@@ -138,12 +149,12 @@ def test_pop_two_from_three_item_stack(stock_stack):
     actual = fruit_stack.pop()
     assert actual == expected
 
-
+    
 # - - - - Queue tests - - - - - #
 
 # REFACTOR CURRENT CODE
 
-@pytest.mark.skip
+# @pytest.mark.skip
 def test_Queue_instantiates():
     new_queue = Queue()
     actual = new_queue._front
@@ -184,7 +195,17 @@ def test_dequeue_item_pass():
     prism.enqueue("orange")
     prism.dequeue()
     actual = prism.peek()
-    expected = "red"
+    expected = "orange"
     assert actual == expected
 
 
+def test_peek_at_empty_queue():
+    cue = Queue()
+    with pytest.raises(AttributeError):
+        cue.peek()
+
+
+def test_dequeue_from_empty_queue():
+    cue = Queue()
+    with pytest.raises(AttributeError):
+        cue.dequeue()
