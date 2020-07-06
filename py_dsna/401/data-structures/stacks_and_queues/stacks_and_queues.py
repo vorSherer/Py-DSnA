@@ -1,7 +1,3 @@
-# class InvalidOperationError:
-#     pass
-
-
 class Node:
     """
     Create a node containing the given value and pointing to the given next node (defaulting to None).
@@ -27,34 +23,43 @@ class Stack:
         self.top = None
         
     def is_empty(self):
+        """
+        Return True if the stack is empty.
+        """
         if self.top == None:
             return True
         else:
             return False
 
     def push(self, value):
-        new_node = Node(value)
-        new_node.next = self.top
+        """
+        Push a new node with the given value to the top of the stack.
+        """
+        new_node = Node(value, self.top)
         self.top = new_node
         return self.top
 
     def peek(self):
+        """
+        Return the value of the top node in the stack without modifying the stack, or raise an error if the stack is empty.
+        """
         if self.is_empty() is False:
             return self.top.value
+        else:
+            raise AttributeError('The stack is empty')
 
     def pop(self):
+        """
+        Pop the top node off the stack and return its value.
+        """
         if self.is_empty() is False:
             stack_pop = self.top
             self.top = self.top.next
             stack_pop.next = None
             return stack_pop.value
+        else:
+            raise AttributeError('The stack is empty')
 
-    def __str__(self):
-        stack_top_val = self.top.value if self.top else None
-        return f"Stack class; top = {stack_top_val}."
-
-    def __repr__(self):
-        return f"<Stack> class; top={self.top}, current value={self.top.value}."
 
 
 class Queue:
@@ -62,17 +67,28 @@ class Queue:
     Instantiate an empty queue, with the front and rear defaulted to None, then modify the queue with Nodes.
     """
     def __init__(self):
-        self._rear = None
         self._front = None
+        self._rear = None
 
     def is_empty(self):
+        """
+        Return True if queue is empty.
+        """
         return self._front == None
-        # if self._front == None:
-        #     return True
-        # else:
+
+        # return self._front is None
+
+        # return not bool(self._front)
+
+        # if self._front:
         #     return False
+        # else:
+        #     return True
 
     def enqueue(self, value):
+        """
+        Add new node with the given value to the rear of the queue. If the queue was empty, the new node also becomes the front.
+        """
         new_node = Node(value)
         print("1: ", self._rear)  # REMOVE
         if self._rear:
@@ -81,22 +97,38 @@ class Queue:
             self._rear = new_node
             print("3: ", self._rear.value)  # REMOVE
             print("4: ", self._front.value)  # REMOVE
-
+        elif self._front:
+            self._front.next = new_node
+            self._rear = new_node
         else:
             print("5: no rear here ")  # REMOVE
             self._rear = self._front = new_node
             print("6: ", self._rear.value)  # REMOVE
+            print("Enqueue complete.")  # REMOVE
 
     def peek(self):
-        if self.is_empty is False:
+        """
+        Return the value of the front node in the queue without modifying the queue, or raise an error if the queue is empty.
+        """
+        if self._front:
             return self._front.value
+        else:
+            raise AttributeError('The queue is empty.')
         
     def dequeue(self):
-        if self.is_empty is False:
+        """Reassign front to point to the node immediately following front, remove the front node in the queue and return it's value, or raise an error if the queue is empty.
+        """
+        if self._front:
             from_queue = self._front
-            self._front = self._front.next
+            if self._front.next == None:
+                self._front = None
+                self._rear = None
+            else:
+                self._front = self._front.next
             from_queue.next = None
             return from_queue.value
+        else:
+            raise AttributeError('The queue is empty.')
 
 
 
@@ -113,5 +145,7 @@ if __name__ == "__main__":
     prism.dequeue()
     actual = prism.peek()
     print("Peek: ", actual)
-    expected = "red"
+    # expected = "red"
+    expected = "orange"
     assert actual == expected
+    print("TEST PASSED.")
