@@ -1,3 +1,7 @@
+# class InvalidOperationError:
+#     pass
+
+
 class Node:
     """
     Create a node containing the given value and pointing to the given next node (defaulting to None).
@@ -58,41 +62,56 @@ class Queue:
     Instantiate an empty queue, with the front and rear defaulted to None, then modify the queue with Nodes.
     """
     def __init__(self):
-        pass
-        # self.rear = None
-        # self.front = self.rear
+        self._rear = None
+        self._front = None
 
     def is_empty(self):
-        pass
-        # if self.front == None:
+        return self._front == None
+        # if self._front == None:
         #     return True
         # else:
         #     return False
 
-    def enqueue(self, value, next_=None):
-        pass
-        # new_node = Node(value)
-        # self.rear.next = new_node
-        # self.rear = new_node
+    def enqueue(self, value):
+        new_node = Node(value)
+        print("1: ", self._rear)  # REMOVE
+        if self._rear:
+            print("2: ", self._rear.value)  # REMOVE
+            self._rear.next = new_node
+            self._rear = new_node
+            print("3: ", self._rear.value)  # REMOVE
+            print("4: ", self._front.value)  # REMOVE
+
+        else:
+            print("5: no rear here ")  # REMOVE
+            self._rear = self._front = new_node
+            print("6: ", self._rear.value)  # REMOVE
 
     def peek(self):
-        pass
-        # if is_empty is not True:
-        #     return self.front.value
+        if self.is_empty is False:
+            return self._front.value
         
     def dequeue(self):
-        pass
-        # if is_empty is not True:
-        #     from_queue = self.front
-        #     self.front = self.front.next
-        #     from_queue.next = None
-        #     return from_queue.value
-            
+        if self.is_empty is False:
+            from_queue = self._front
+            self._front = self._front.next
+            from_queue.next = None
+            return from_queue.value
 
 
 
 
 
 if __name__ == "__main__":
-    new_node = Node("apples")
-    print(new_node)
+    # new_node = Node("apples")
+    # print(new_node)
+    prism = Queue()
+    prism.enqueue("red")
+    print("R: ", prism._front.value)
+    prism.enqueue("orange")
+    print("O: ", prism._rear.value)
+    prism.dequeue()
+    actual = prism.peek()
+    print("Peek: ", actual)
+    expected = "red"
+    assert actual == expected

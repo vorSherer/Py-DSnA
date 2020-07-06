@@ -113,26 +113,24 @@ def test_three_item_stack_not_empty(stock_stack):
     assert fruit_stack.is_empty != True
 
     
-# @pytest.mark.skip
 def test_stack_top_item_str_returns(stock_stack):
     fruit_stack = stock_stack
     assert str(fruit_stack.top) == "Node value = cherries and next node = bananas."
 
 
-# @pytest.mark.skip
 def test_three_item_stack_peek_pass(stock_stack):
     fruit_stack = stock_stack
-    assert fruit_stack.top.value == "cherries"
-    # assert fruit_stack.peek() == "cherries"
+    # assert fruit_stack.top.value == "cherries"
+    assert fruit_stack.peek() == "cherries"
     
 
-@pytest.mark.skip
+# @pytest.mark.skip
 def test_three_item_stack_pop_pass(stock_stack):
     fruit_stack = stock_stack
-    assert fruit_stack.pop == "cherries"
+    assert fruit_stack.pop() == "cherries"
 
 
-@pytest.mark.skip
+# @pytest.mark.skip
 def test_pop_two_from_three_item_stack(stock_stack):
     fruit_stack = stock_stack
     fruit_stack.pop()
@@ -156,33 +154,35 @@ def test_stack_item_repr_returns():
 
 # - - - - Queue tests - - - - - #
 
+# REFACTOR CURRENT CODE
+
 # @pytest.mark.skip
 def test_Queue_instantiates():
     new_queue = Queue()
-    actual = new_queue.peek()
+    actual = new_queue._front
     expected = None
     assert actual == expected
 
 
 @pytest.mark.skip
-def test_queue_isempty():
+def test_queue_isempty():  # IS_EMPTY isn't working!
     blank = Queue()
     expected = True
     actual = blank.is_empty
     assert actual == expected
 
 
-@pytest.mark.skip
+# @pytest.mark.skip
 def test_enqueue_one_item_pass():
     prism = Queue()
     prism.enqueue("red")
-    actual = prism.front.value
+    actual = prism._front.value
     expected = "red"
     assert actual == expected
 
 
 @pytest.mark.skip
-def test_peek_at_item_pass():
+def test_peek_at_item_pass():  # PEEK isn't working!
     prism = Queue()
     prism.enqueue("red")
     actual = prism.peek()
@@ -190,13 +190,14 @@ def test_peek_at_item_pass():
     assert actual == expected
 
 
-@pytest.mark.skip
+# @pytest.mark.skip
 def test_dequeue_item_pass():
     prism = Queue()
     prism.enqueue("red")
     prism.enqueue("orange")
     prism.dequeue()
-    actual = prism.peek()
+    actual = prism.peek()  # Won't work until PEEK fixed
     expected = "red"
     assert actual == expected
+
 
