@@ -88,6 +88,17 @@ def test_one_item_popped_stack_isempty_pass():
     assert actual == expected
 
 
+def test_peek_at_empty_stack():
+    stack = Stack()
+    with pytest.raises(AttributeError):
+        stack.peek()
+
+
+def test_dequeue_from_empty_stack():
+    stack = Stack()
+    with pytest.raises(AttributeError):
+        stack.dequeue()
+
 
 @pytest.fixture
 def stock_stack():
@@ -138,20 +149,7 @@ def test_pop_two_from_three_item_stack(stock_stack):
     actual = fruit_stack.pop()
     assert actual == expected
 
-
-@pytest.mark.skip
-def test_stack_str_returns():
-    stack = Stack()
-    stack.push("apples")
-    assert str(Stack.top) == "Stack class; top = apples."
-
     
-@pytest.mark.skip
-def test_stack_item_repr_returns():
-    stack = Stack()
-    assert repr(stack.top) == "Node value = cherries and next node = bananas."
-
-
 # - - - - Queue tests - - - - - #
 
 # REFACTOR CURRENT CODE
@@ -164,11 +162,11 @@ def test_Queue_instantiates():
     assert actual == expected
 
 
-@pytest.mark.skip
+# @pytest.mark.skip
 def test_queue_isempty():  # IS_EMPTY isn't working!
     blank = Queue()
     expected = True
-    actual = blank.is_empty
+    actual = blank.is_empty()
     assert actual == expected
 
 
@@ -181,8 +179,8 @@ def test_enqueue_one_item_pass():
     assert actual == expected
 
 
-@pytest.mark.skip
-def test_peek_at_item_pass():  # PEEK isn't working!
+# @pytest.mark.skip
+def test_peek_at_item_pass():
     prism = Queue()
     prism.enqueue("red")
     actual = prism.peek()
@@ -196,8 +194,18 @@ def test_dequeue_item_pass():
     prism.enqueue("red")
     prism.enqueue("orange")
     prism.dequeue()
-    actual = prism.peek()  # Won't work until PEEK fixed
-    expected = "red"
+    actual = prism.peek()
+    expected = "orange"
     assert actual == expected
 
 
+def test_peek_at_empty_queue():
+    cue = Queue()
+    with pytest.raises(AttributeError):
+        cue.peek()
+
+
+def test_dequeue_from_empty_queue():
+    cue = Queue()
+    with pytest.raises(AttributeError):
+        cue.dequeue()

@@ -1,5 +1,5 @@
 # Stacks and Queues
-<!-- Short summary or background information -->
+Implementation of a stack and a queue, each using linked list methods and a Node class.
 
 ## Challenge
 #### Features
@@ -31,21 +31,36 @@ __Big O space__ for each will be __O(n)__ and <br>
 __Big O time__ for each operation is __O(1)__.
 
 ## API
-<!-- Description of each method publicly available to your Stack and Queue-->
+This implementation has access to the Node class and all the properties on the Linked List class.
 
-<!-- ## Code Challenge 10 whiteboards:
+My code is [here.](./stacks_and_queues.py)
+
+## Code Challenge 10 whiteboards:
+#### Stack - 
 ![CC-10 Stack -1](./assets/stack_WB-1.png)
+
+![CC-10 Stack -2](./assets/stack_WB-2.png)
+
+![CC-10 Stack -3](./assets/stack_WB-3.png)
+
+#### Queue - 
 ![CC-10 Queue -1](./assets/queue_WB-1.png)
- -->
+
+![CC-10 Queue -2](./assets/queue_WB-2.png)
+
+![CC-10 Queue -3](./assets/queue_WB-3.png)
+
+![CC-10 Queue -4](./assets/queue_WB-4.png)
+
 
 ## Task Checklist: <br>
-- [ ] Top-level README “Table of Contents” is updated <br>
-- [  Feature tasks for this challenge are completed <br>
-- [ ] Unit tests written and passing <br>
-    - [ ] “Happy Path” - Expected outcome <br>
-    - [ ] Expected failure <br>
-    - [ ] Edge Case (if applicable/obvious) <br>
-- [ ] README for this challenge is complete <br>
-    - [ ] Summary, Description, Approach & Efficiency, Solution <br>
-    - [ ] Link to code <br>
-    - [ ] Pictures of whiteboards <br>
+- [X] Top-level README “Table of Contents” is updated <br>
+- [X] Feature tasks for this challenge are completed <br>
+- [X] Unit tests written and passing <br>
+    - [X] “Happy Path” - Expected outcome <br>
+    - [X] Expected failure <br>
+    - [X] Edge Case (if applicable/obvious) <br>
+- [X] README for this challenge is complete <br>
+    - [X] Summary, Description, Approach & Efficiency, Solution <br>
+    - [X] Link to code <br>
+    - [X] Pictures of whiteboards <br>
