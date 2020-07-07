@@ -11,4 +11,9 @@
 
 [Code Challenges 05/06/07 - LinkedList](/py_dsna/401/data-structures/linked-list/linked_list/README.md)
 
+[Code Challenge 08 - ll_merge](/py_dsna/401/challenges/ll-merge/README.md)
+
+[Code Challenge 09 - ll_reverse]()
+
+[Code Challenge 10 - Stacks and Queues](/py_dsna/401/data-structures/stacks_and_queues/README.md)
 
