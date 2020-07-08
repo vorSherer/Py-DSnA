@@ -222,5 +222,5 @@ if __name__ == "__main__":
     # print("Next val ", ll.head.next_node.value)
     # print(ll.value_at_kth_from_end(5))
     # print(ll.value_at_kth_from_end(-2))
-    print(ll.value_at_kth_from_end("one"))
+    # print(ll.value_at_kth_from_end("one"))
 
