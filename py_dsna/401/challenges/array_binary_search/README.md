@@ -30,9 +30,8 @@ Big O time for this approach is O(log(n) <br>
     - [X] Pictures of whiteboard <br>
 
 
-Pull Request submitted: https://github.com/vorSherer/Py-DSnA/pull/11
-
-
 ## Collaboration and Attribution
 Thanks to __*Skyler Burger*__ for help with list comprehensions (*after* I brute-force created a list of 100000 elements!) <br>
 [Big O Cheatsheet](https://www.bigocheatsheet.com/) helped in determining *Big O* for this assignment. <br>
+
+Pull Request submitted: https://github.com/vorSherer/Py-DSnA/pull/11
