@@ -33,6 +33,7 @@ __Big O time__ for each operation is __O(1)__.
 ## API
 This implementation has access to the Node class and all the properties on the Linked List class.
 
+## Solution
 My code is [here.](./stacks_and_queues.py)
 
 ## Code Challenge 10 whiteboards:
