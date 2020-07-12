@@ -12,7 +12,7 @@ def test_stack_exists():
     assert Stack
 
 
-@pytest.mark.skip
+# @pytest.mark.skip
 def test_pq_exists():
     assert PseudoQueue
 
